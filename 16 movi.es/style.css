@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html  {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  display: grid;
+  grid-template-columns: 7rem 1fr;
+  grid-template-rows: 4.2rem 1fr;
+  grid-template-areas: 'header header' 'aside main';
+  height: 100vh;
+}
+
+.header {
+  grid-area: header;
+  display: grid;
+  grid-template-columns: 15rem 1fr 19rem;
+  align-items: center;
+  justify-content: center;
+  -webkit-box-shadow: 0px 14px 10px -6px #000000;
+  box-shadow: 0px 14px 10px -6px #ddd4d4;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo img {
+  width: 2rem;
+}
+
+.logo h1 {
+  -webkit-text-stroke: 1px red;
+  color: white;
+}
+
+.buscador {
+  text-align: center;
+}
+
+.buscador input {
+  width: 85%;
+  border-radius: 0.5rem;
+  border: 1px solid #b2b1b6;
+  font-size: 1rem;
+  padding: 0.5rem;
+}
+
+.usuario {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.usuario img {
+  width: 2.5rem;
+  border-radius: 100%;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.aside {
+  grid-area: aside;
+  display: grid;
+  background: #fd6766;
+}
+
+.menu,
+.ajustes {
+  color: white;
+  text-align: center;
+}
+
+.ajustes {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+li {
+  list-style: none;
+  padding: 1.3rem;
+}
+
+li a {
+  text-decoration: none;
+  color: white;
+}
+
+.fa {
+  font-size: 1.9rem;
+  color: white;
+  padding: 0;
+}
+
+.main {
+  grid-area: main;
+}
+
+.titulo-ini {
+  padding: 1rem 0 0 1rem;
+}
+
+.lista-peliculas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  padding: 1rem 0 0 1rem;
+}
+
+.peliculas {
+  cursor: pointer;
+  position: relative;
+  display: block;
+}
+
+.peliculas-img img {
+  width: 100%;
+  vertical-align: top;
+}
+
+.item-overlay {
+  background: rgba(253, 103, 102, 0.72941);
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: white;
+  /* padding: 0.5em; */
+  height: 50%;
+  transition: 0.3s;
+}
+
+.item-overlay h3 {
+  margin: 0.5rem 0 0 0.5rem;
+}
+
+.item-overlay p {
+  margin: 0.5rem 0 0 0.5rem;
+}
+
+.peliculas:hover .item-overlay {
+  height: 100%;
+  padding: 0 0.5em;
+}
